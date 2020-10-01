@@ -8,7 +8,7 @@ img_list = ["img\\stage_evev.png", "img\\busimeet1.png", "img\\business1.png", "
 
 
 class home_page:
-    i = random.randint(0, 6)
+    i = random.randint(0, 6) #FOR RANDOM VALUES
 
     def homepage(self):
         Frame(root, bg="black", width=1341, height=35, relief=SUNKEN).place(x=13, y=20)
@@ -37,13 +37,15 @@ class home_page:
         reg_event.place(x=190, y=668)
         list_box.place(x=599, y=60)
 
-    def register_pop(self):
-        tkinter.messagebox.showwarning("message", "Already registered")
+    
 
     def registerpage(self):
         Label(bg="light blue", height=2, width=30).place(x=190, y=668)
         Button(text="REGISTERED", bg="green", fg="black", font="60,'Helvetica','bold'",
                command=self.register_pop).place(x=190, y=668)
+    
+    def register_pop(self):
+        tkinter.messagebox.showwarning("message", "Already registered")
 
     def after_login(self):
         user_id = email_entry.get()
